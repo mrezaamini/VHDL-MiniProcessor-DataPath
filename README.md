@@ -26,8 +26,8 @@ For a better understanding of how this unit works, you can see signal quantifica
 
 ## Test:
 intUnit_pack contains a package that help us with reading input files for testbench, and testbench reads from myinput.txt and starts the test. This test is done with ModelSim simulator and simulation time is 1000 ns. (you can run and observe SRAM in modelsim : windows > memory space).
+
 Test Example:
-<br></br>
 <p align="center">
 <img src="https://github.com/mrezaamini/VHDL-MiniProcessor-DataPath/blob/main/result.png" alt="test"/>
 </p>
