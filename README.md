@@ -14,23 +14,22 @@ This simple 32-bit Integer Unit consists of four 32-bit registers (A, B, C, D), 
 <img src="https://github.com/mrezaamini/VHDL-MiniProcessor-DataPath/blob/main/datapath-functions.png" alt="datapath and functions" width="500" />
 </p>
 
+For a better understanding of how this unit works, you can see signal quantifications bellow:
+<p align="center">
+<img src="https://github.com/mrezaamini/VHDL-MiniProcessor-DataPath/blob/main/report.png" alt="signal quantifications" width="500" />
+</p>
 
-- come[0..3]: 4-bit input, each floor has it's own button and this signal shows us which floor's button in the building is pushed.
-- cf[0..3]: 4-bit input, shows us pushed buttons inside the elevator.
-- switch[0..3]: 4-bit input, there is a switch in each floor that turns 1 whenever the elevator reaches to that specific floor.
-- motor-up: 1-bit output, 1 when elevator is moving up.
-- motor-down: 1-bit output, 1 when elevator is moving down.
-- current-floor: in this implementation is 4-bit output that shows which floor is elevator in (for showing it inside the cabin).
-- move-state: 1-bit output, 1 when elevator is moving and 0 when it stops.
+- ld_cw[4..0]: load signal control word that each bit specifies if we are loading data to a specific register or not.
+- bus_sel[1..0]: shows which data we want to send through the bus.
+- memAdr[5..0]: 6-bit that specifies input address for the SRAM (note: in functions that uses registers as the address we only use 6 LSBs of them for this part).
+- aluFunc[2..0]: specifies the function of the ALU.
 
-## TEST:
-The main test is with a simple testbench that initiates a clock (clk) and changes inputs over time.
-In Addition, there's another testbench in the "text file testbench" folder that contains testbench, supporting package, and input text file. (for further information about this testbench click [here](https://mrezaamini.github.io/Elevator-controller-FSM/). )
-Tests are done with modelSim simulator. 
+## Test:
+intUnit_pack contains a package that help us with reading input files for testbench, and testbench reads from myinput.txt and starts the test. This test is done with ModelSim simulator and simulation time is 1000 ns. (you can run and observe SRAM in modelsim : windows > memory space).
 Test Example:
 <br></br>
 <p align="center">
-<img src="https://github.com/mrezaamini/Elevator-controller-FSM/blob/main/assets/test.png" alt="test"/>
+<img src="https://github.com/mrezaamini/VHDL-MiniProcessor-DataPath/blob/main/result.png" alt="test"/>
 </p>
 
 ## Support + Feedback
@@ -40,7 +39,7 @@ Include information on how to get support.
 
 ## Thank You
 
-Thanks for paying attention, and hope this contest was usefull for you!
+Thanks for paying attention, and hope it was usefull for you!
 
 ## License
 Link to [LICENSE](LICENSE) doc.
