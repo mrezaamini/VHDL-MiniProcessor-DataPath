@@ -12,7 +12,7 @@ In this project, I implemented a simple 32-bit Integer Unit Data Path & Controll
 This simple 32-bit Integer Unit consists of four 32-bit registers (A, B, C, D), an ALU, 32x64 SRAM, 32-bit accumulator and a general 32-bit bus. This mini-processor can perform 11 different functions. You can see data path and functions in the image bellow:
 <br></br>
 <p align="center">
-<img src="https://github.com/mrezaamini/VHDL-MiniProcessor-DataPath/blob/main/datapath-functions.png" alt="datapath and functions" width="350" />
+<img src="https://github.com/mrezaamini/VHDL-MiniProcessor-DataPath/blob/main/datapath-functions.png" alt="datapath and functions" width="500" />
 </p>
 
 
